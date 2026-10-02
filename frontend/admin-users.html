@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Accounts - Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Registered Accounts</h1>
+        <a href="admin.html">Order Management</a>
+        <a href="admin-staff.html">Manage Staff</a>
+        <a href="index.html">Home</a>
+    </header>
+
+    <main>
+        <h2>Account directory</h2>
+        <p>Review account roles, registration dates, and most recent sign-ins. Passwords are never displayed.</p>
+
+        <section class="account-summary" aria-label="Account totals">
+            <div class="account-summary-item"><strong id="totalAccounts">—</strong><span>Total accounts</span></div>
+            <div class="account-summary-item"><strong id="activeAccounts">—</strong><span>Active accounts</span></div>
+            <div class="account-summary-item"><strong id="staffAccounts">—</strong><span>Staff accounts</span></div>
+        </section>
+
+        <section class="account-directory" aria-label="Registered user list">
+            <div class="account-filters">
+                <input id="accountSearch" type="search" placeholder="Search name, email, or phone" aria-label="Search accounts">
+                <select id="roleFilter" aria-label="Filter by role">
+                    <option value="ALL">All roles</option>
+                    <option value="CUSTOMER">Customers</option>
+                    <option value="STAFF">Staff</option>
+                    <option value="DELIVERY">Delivery</option>
+                    <option value="ADMIN">Admins</option>
+                </select>
+                <select id="statusFilter" aria-label="Filter by access status">
+                    <option value="ALL">All access states</option>
+                    <option value="ACTIVE">Active</option>
+                    <option value="INACTIVE">Inactive</option>
+                </select>
+            </div>
+
+            <div class="staff-table-wrap">
+                <table class="staff-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Role</th>
+                            <th>Access</th>
+                            <th>Registered</th>
+                            <th>Last sign-in</th>
+                            <th>Account access</th>
+                        </tr>
+                    </thead>
+                    <tbody id="accountList">
+                                <tr><td colspan="8">Loading accounts...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/admin-users.js"></script>
+</body>
+</html>

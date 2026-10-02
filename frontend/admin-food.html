@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Food Management - Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🍔 Food Management</h1>
+
+    <a href="admin.html">Admin Dashboard</a>
+
+    <a href="index.html">Home</a>
+
+    <a href="menu.html">Menu</a>
+
+</header>
+
+
+<main>
+
+    <!-- ADD FOOD -->
+
+    <section class="food-admin-form">
+
+        <h2 id="form-title">
+            Add New Food
+        </h2>
+
+
+        <form id="foodForm">
+
+            <input
+                type="hidden"
+                id="foodId"
+            >
+
+
+            <label>
+                Category
+            </label>
+
+            <select
+                id="categoryId"
+                required
+            >
+
+                <option value="">
+                    Select Category
+                </option>
+
+            </select>
+
+
+            <label>
+                Food Name
+            </label>
+
+            <input
+                type="text"
+                id="foodName"
+                placeholder="Enter food name"
+                required
+            >
+
+
+            <label>
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                placeholder="Enter food description"
+            ></textarea>
+
+
+            <label>
+                Price
+            </label>
+
+            <input
+                type="number"
+                id="price"
+                step="0.01"
+                min="0"
+                placeholder="Enter price"
+                required
+            >
+
+
+            <label>
+                Image URL
+            </label>
+
+            <input
+                type="text"
+                id="imageUrl"
+                placeholder="https://example.com/food.jpg"
+            >
+
+
+            <label>
+                Availability
+            </label>
+
+            <select id="availability">
+
+                <option value="1">
+                    Available
+                </option>
+
+                <option value="0">
+                    Not Available
+                </option>
+
+            </select>
+
+
+            <button type="submit">
+                Save Food
+            </button>
+
+
+            <button
+                type="button"
+                id="cancelButton"
+                onclick="resetForm()"
+                style="display:none;"
+            >
+                Cancel Edit
+            </button>
+
+        </form>
+
+
+        <p id="formMessage"></p>
+
+    </section>
+
+
+    <!-- FOOD LIST -->
+
+    <section>
+
+        <h2>
+            Existing Food Items
+        </h2>
+
+
+        <div id="foodList">
+
+            <p>
+                Loading food items...
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/common.js"></script>
+<script src="js/admin-food.js"></script>
+
+</body>
+
+</html>

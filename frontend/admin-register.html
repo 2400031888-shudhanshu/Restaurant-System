@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Admin - Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Registration</h1>
+        <a href="admin.html">Admin Dashboard</a>
+        <a href="index.html">Home</a>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h2>Create admin account</h2>
+            <p>Only an authenticated administrator can create another admin account.</p>
+
+            <form id="adminRegisterForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" autocomplete="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" autocomplete="email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" autocomplete="tel">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" minlength="8" autocomplete="new-password" required>
+
+                <button type="submit">Create admin account</button>
+            </form>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </div>
+    </main>
+
+    <script src="js/admin-register.js"></script>
+</body>
+</html>

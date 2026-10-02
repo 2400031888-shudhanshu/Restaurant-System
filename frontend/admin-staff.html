@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Staff - Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Staff Management</h1>
+        <a href="admin.html">Order Management</a>
+        <a href="index.html">Home</a>
+    </header>
+
+    <main>
+        <section class="food-admin-form" aria-labelledby="create-staff-heading">
+            <h2 id="create-staff-heading">Create staff login</h2>
+            <form id="staffForm">
+                <label for="staffName">Name</label>
+                <input id="staffName" name="name" maxlength="100" autocomplete="name" required>
+
+                <label for="staffEmail">Email</label>
+                <input id="staffEmail" name="email" type="email" maxlength="100" autocomplete="email" required>
+
+                <label for="staffPhone">Phone</label>
+                <input id="staffPhone" name="phone" type="tel" maxlength="15" autocomplete="tel">
+
+                <label for="staffRole">Account type</label>
+                <select id="staffRole" name="role" required>
+                    <option value="STAFF">Restaurant staff</option>
+                    <option value="DELIVERY">Delivery person</option>
+                </select>
+
+                <label for="staffPassword">Temporary password</label>
+                <input id="staffPassword" name="password" type="password" minlength="8" maxlength="72" autocomplete="new-password" required>
+
+                <button type="submit">Create staff account</button>
+            </form>
+            <p id="staffMessage" role="status" aria-live="polite"></p>
+        </section>
+
+        <section aria-labelledby="staff-list-heading">
+            <h2 id="staff-list-heading">Active staff</h2>
+            <div class="staff-table-wrap">
+                <table class="staff-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Account type</th>
+                            <th>Access</th>
+                        </tr>
+                    </thead>
+                    <tbody id="staffList">
+                        <tr><td colspan="5">Loading staff...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/admin-staff.js"></script>
+</body>
+</html>

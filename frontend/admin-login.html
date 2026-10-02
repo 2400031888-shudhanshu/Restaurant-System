@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal Login - Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin and Staff Portal</h1>
+        <a href="index.html">Home</a>
+        <a href="login.html">Customer login</a>
+    </header>
+
+    <main>
+        <section class="auth-container" aria-labelledby="admin-login-title">
+            <h2 id="admin-login-title">Administrator, staff, or delivery sign in</h2>
+            <form id="adminLoginForm">
+                <label for="email">Email</label>
+                <input type="email" id="email" autocomplete="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" autocomplete="current-password" required>
+
+                <button type="submit">Sign in to admin</button>
+            </form>
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="js/admin-login.js"></script>
+</body>
+</html>
